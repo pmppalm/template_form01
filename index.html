@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./js/form-validation.js" rel="stylesheet">
+    <script src="./js/creaditcard.js"></script>
+    <script src="./js/phone_format.js"></script>
+    <script>
+        window.onload = function() {
+            inputfields = document.getElementsByClassName("creditcard")
+            for (var i = 0; i < inputfields.length; i++) {
+                credit_card_input(inputfields[i]);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <body class="bg-light">
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="img-fluid" src="./img/logo.png" alt="">
+            </div>
+            <div class="col-md-auto">
+                <h4 class="mb-3 ">TAXPAYER INFORMATION</h4>
+                <form class="needs-validation " novalidate>
+                    <!--TAX ID-->
+                    <div class="mb-3 ">
+                        <label for="firstName ">Tax ID Number</label>
+                        <input type="text" class="creditcard form-control" placeholder="xxxx-xxxx-xxxx-x" required/>
+                        <div class="invalid-feedback " style="width: 100%; ">
+                            Full Name of Business is required.
+                        </div>
+                    </div>
+                    <!--Business type-->
+                    <div class="mb-3 ">
+                        <label for="username ">Business Type</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
+                                <label class="form-check-label" for="inlineRadio1">Company</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required>
+                                <label class="form-check-label" for="inlineRadio2">Juristic Partnership</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" required>
+                                <label class="form-check-label" for="inlineRadio3">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--FullName BUS-->
+                    <div class="mb-3 ">
+                        <label for="username ">Full Name of Business</label>
+                        <div class="input-group ">
+                            <input type="text " class="form-control " id="username " placeholder="enter your full name of business " required>
+                            <div class="invalid-feedback " style="width: 100%; ">
+                                Full Name of Business is required.
+                            </div>
+                        </div>
+                    </div>
+                    <!--FullName BUS-->
+                    <div class="mb-3 ">
+                        <label for="tradename ">Trade Name</label>
+                        <div class="input-group ">
+                            <input type="text " class="form-control " id="tradename " placeholder="enter your tradename " required>
+                            <div class="invalid-feedback " style="width: 100%; ">
+                                Trade Name of Business is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ">
+                        <label for="typeofeservice ">Type of Electronic Service(s)</label>
+                        <input type="text " class="form-control " id="typeofeservice " placeholder="enter your type of electronic services" required>
+                        <div class="invalid-feedback ">
+                            Type of Electronic Services is required.
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ">
+                        <label for="business_website ">Business Website</label>
+                        <input type="text " class="form-control " id="business_website " placeholder="enter your business website " required>
+                        <div class="invalid-feedback ">
+                            Business Website is required.
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ">
+                        <label for="date_incorporation ">Date of Incorporation (DD/MM/YY)</label>
+                        <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input" required>
+                        <div class="invalid-feedback ">
+                            Please enter a dateof incorporation.
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ">
+                        <label for="reg_bus_ci ">Registered Business Address in Country of Incorporation</label>
+                        <input type="date " class="form-control " id="reg_bus_ci " placeholder="enter your registered business address in country of incorporation " required>
+                        <div class="invalid-feedback ">
+                            Please enter a valid Registered Business Address in Country of Incorporation.
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-5 mb-3 ">
+                            <label for="street ">Street</label>
+                            <input type="text " class="form-control " id="street " placeholder="enter your street " required>
+                            <div class="invalid-feedback ">
+                                Please enter a valid street.
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-3 ">
+                            <label for="district ">District</label>
+                            <input type="district " class="form-control " id="district " placeholder="enter your district " required>
+                            <div class="invalid-feedback ">
+                                Please enter a valid district.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-5 mb-3 ">
+                            <label for="city ">Town/City</label>
+                            <input type="text " class="form-control " id="city " placeholder="enter your town or city " required>
+                            <div class="invalid-feedback ">
+                                Please enter a valid city.
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-3 ">
+                            <label for="district ">State/Province</label>
+                            <input type="district " class="form-control " id="district " placeholder="enter your state or province" required>
+                            <div class="invalid-feedback ">
+                                Please enter a valid district.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-5 mb-3 ">
+                            <label for="country ">Country</label>
+                            <input type="text " class="form-control " id="country " placeholder="enter your country " required>
+                            <div class="invalid-feedback ">
+                                Please enter a valid country.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3 ">
+                            <label for="zip ">Postcode/Zip Code</label>
+                            <input type="text " class="form-control " id="zip " placeholder="enter your zip code " required>
+                            <div class="invalid-feedback ">
+                                Postcode/Zip Code code required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email">Email Address </label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address for shipping updates.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone">Phone Number </label>
+                        <input id="tel" class="form-control" placeholder="(xxx)xxx-xxxx" type="tel" maxlength="13" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" required>
+                        <div class="invalid-feedback">
+                            Please enter a phone number.
+                        </div>
+                    </div>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block " type="submit ">Continue</button>
+            </form>
+        </div>
+        <footer class="my-5 pt-5 text-muted text-center text-small ">
+            <p class="mb-1 ">&copy; 2017-2019 Company Name</p>
+            <ul class="list-inline ">
+                <li class="list-inline-item "><a href="# ">Privacy</a></li>
+                <li class="list-inline-item "><a href="# ">Terms</a></li>
+                <li class="list-inline-item "><a href="# ">Support</a></li>
+            </ul>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <script src="./js/form-validation.js"></script>
+        <script src="./js/phone_format.js"></script>
+
+</html>
